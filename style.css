@@ -1,3 +1,45 @@
+/* Extracted from Tailwind compiled CSS - animations not visible in source */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(226, 37, 81, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(226, 37, 81, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(226, 37, 81, 0); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* Applied to elements */
+.download-button {
+  animation: pulse-red 2s infinite;
+}
+
+.logo-icon {
+  animation: spin-slow 20s linear infinite;
+}
+
+.feature-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(226, 37, 81, 0.2);
+}
+
 /* Tailwind CSS Output - Compiled */
 *, ::before, ::after {
   box-sizing: border-box;
@@ -518,3 +560,4 @@ body {
     line-height: 1;
   }
 }
+
